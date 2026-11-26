@@ -1,20 +1,8 @@
 // Mock data for step 1 (no backend yet). Built from the attached real VBE examples.
 import examples from "./exampleTasks.json";
-import type { Task, TaskSet } from "@/lib/types";
-import type { TaskFormat } from "@/config/examTemplates";
+import type { ExampleTask, Task, TaskSet } from "@/lib/types";
 
-export interface ExampleTask {
-  course: "A" | "B";
-  exam_part: "I" | "II";
-  topic: string;
-  format: TaskFormat;
-  points: number;
-  statement: string;
-  parts: { label: string; statement: string; points: number }[];
-  answer: unknown[];
-  solution: unknown[];
-  source: string;
-}
+export type { ExampleTask };
 export const EXAMPLE_TASKS = examples as ExampleTask[];
 
 const mockSolution = (pts: number) =>
@@ -34,7 +22,11 @@ function toTask(e: ExampleTask, i: number, verified = true): Task {
     points: e.points,
     statement: e.statement,
     parts: e.parts,
-    answer: e.parts.length ? e.parts.map((p) => `${p.label}. Atsakymas`) : ["Pavyzdinis atsakymas"],
+    answer: (e.parts.length ? e.parts : [null]).map(() => ({
+      type: "number" as const,
+      value: "",
+      display: "Pavyzdinis atsakymas",
+    })),
     solution: mockSolution(e.points),
     verified,
     attempts: 1,
@@ -48,21 +40,25 @@ const mcq: Task[] = [
   {
     id: "m1", position: 0, label: "1", format: "mcq", topic: "Logaritmai", points: 1,
     statement: "Apskaičiuokite $\\log_2 32$.", options: ["$4$", "$5$", "$16$", "$6$"],
-    parts: [], answer: ["B"], solution: [{ text: "$2^5 = 32$, todėl $\\log_2 32 = 5$.", points: 1 }],
+    parts: [], answer: [{ type: "choice", value: "B", display: "B" }], solution: [{ text: "$2^5 = 32$, todėl $\\log_2 32 = 5$.", points: 1 }],
     verified: true, attempts: 1,
   },
   {
     id: "m2", position: 1, label: "2", format: "mcq", topic: "Šaknys", points: 1,
     statement: "Kuris skaičius lygus $\\sqrt{50} - \\sqrt{8}$?",
     options: ["$\\sqrt{42}$", "$3\\sqrt{2}$", "$7\\sqrt{2}$", "$2\\sqrt{3}$"],
-    parts: [], answer: ["B"], solution: [{ text: "$5\\sqrt{2} - 2\\sqrt{2} = 3\\sqrt{2}$.", points: 1 }],
+    parts: [], answer: [{ type: "choice", value: "B", display: "B" }], solution: [{ text: "$5\\sqrt{2} - 2\\sqrt{2} = 3\\sqrt{2}$.", points: 1 }],
     verified: false, attempts: 2,
   },
   {
     id: "m3", position: 2, label: "3", format: "short", topic: "Progresijos", points: 2,
     statement:
       "Aritmetinės progresijos $a_1 = 3$, $d = 4$. Raskite $a_{10}$ ir $S_{10}$.\n\n| $n$ | 1 | 2 | 3 |\n|---|---|---|---|\n| $a_n$ | 3 | 7 | 11 |",
-    parts: [], answer: ["$a_{10} = 39$, $S_{10} = 210$"],
+    parts: [],
+    answer: [
+      { type: "number", value: "39", display: "$a_{10} = 39$" },
+      { type: "number", value: "210", display: "$S_{10} = 210$" },
+    ],
     solution: [
       { text: "$a_{10} = 3 + 9\\cdot 4 = 39$", points: 1 },
       { text: "$S_{10} = \\frac{3 + 39}{2}\\cdot 10 = 210$", points: 1 },

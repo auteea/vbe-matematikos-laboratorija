@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import katexCss from "katex/dist/katex.min.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { useRouterState } from "@tanstack/react-router";
 import { TopBar } from "../components/TopBar";
@@ -96,7 +97,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" },
+      // Bundled with the app (no CDN), so math also renders offline and in print.
+      { rel: "stylesheet", href: katexCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),

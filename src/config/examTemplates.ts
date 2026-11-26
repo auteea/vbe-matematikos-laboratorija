@@ -25,6 +25,8 @@ export interface ExamTemplate {
   durationMin: number;
   durationLabel: string;
   allowedGrades: (11 | 12)[];
+  /** Target share of points per topic area id (see topics.ts) for slots without a fixed topic. */
+  areaShares?: Record<string, number>;
   rules: string[];
   sections: { title: string; instruction: string; slots: TemplateSlot[] }[];
 }
@@ -39,6 +41,7 @@ const partI = (course: Course): ExamTemplate => ({
   durationMin: 120,
   durationLabel: "Trukmė – 2 val. (120 min.)",
   allowedGrades: [11],
+  areaShares: { "11-skaiciai": 0.4, "11-modeliai": 0.6 },
   rules: [
     "Tik 11 kl. temos.",
     "Apie 40 % taškų – Skaičiai ir skaičiavimai, apie 60 % – Modeliai ir sąryšiai.",

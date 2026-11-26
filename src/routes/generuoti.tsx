@@ -3,8 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { areasForCourse, COURSE_NAMES, DAILY_TASK_LIMIT, MAX_TASKS_PER_SET, TASK_KINDS, type Course, type TaskKind } from "@/config/topics";
 import { getTemplate, templateSlotCount, type ExamPart } from "@/config/examTemplates";
 import { ExamSheet } from "@/components/exam/ExamSheet";
-import { EXAMPLE_TASKS, exampleToTask } from "@/data/mockSets";
-import type { TaskSet } from "@/lib/types";
+import { EXAMPLE_TASKS } from "@/data/mockSets";
+import { createMockGenerator } from "@/lib/generation/mockGenerator";
+import { planMockExam, planTopicSet, type Slot } from "@/lib/generation/plan";
+import { runGeneration, type GenerateFn } from "@/lib/generation/runner";
+import type { Task, TaskSet } from "@/lib/types";
 
 export const Route = createFileRoute("/generuoti")({
   head: () => ({ meta: [ { title: "Generuoti uždavinius – VBE uždavinių generatorius" }, { name: "description", content: "Teminiai rinkiniai ir bandomieji VBE matematikos egzaminai." }, { property: "og:title", content: "Generuoti uždavinius – VBE uždavinių generatorius" }, { property: "og:description", content: "Teminiai rinkiniai ir bandomieji VBE matematikos egzaminai." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" } ] }),
@@ -33,8 +36,11 @@ function Generate() {
   const [topics, setTopics] = useState<Set<string>>(new Set());
   const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
   const [preview, setPreview] = useState<TaskSet | null>(null);
-  const timer = useRef<ReturnType<typeof setInterval>>(undefined);
-  useEffect(() => () => clearInterval(timer.current), []);
+  const [error, setError] = useState<string | null>(null);
+  const slotsRef = useRef<Slot[]>([]);
+  const generatorRef = useRef<GenerateFn | null>(null);
+  const abortRef = useRef<AbortController | null>(null);
+  useEffect(() => () => abortRef.current?.abort(), []);
 
   const areas = areasForCourse(course);
   const remaining = DAILY_TASK_LIMIT - USED_TODAY;
@@ -44,25 +50,69 @@ function Generate() {
     const n = new Set(s); const all = names.every((x) => n.has(x)); names.forEach((x) => all ? n.delete(x) : n.add(x)); return n;
   });
 
-  function start() {
-    // Mock generation: reveal example tasks one by one.
-    const pool = EXAMPLE_TASKS.filter((e) => e.course === course);
-    const set: TaskSet = {
-      id: "preview", title: tab === "mock" ? `Bandomasis egzaminas ${course}, ${part} dalis` : "Teminis rinkinys",
-      mode: tab, course, examPart: tab === "mock" ? part : null, totalPoints: 0, createdAt: new Date().toISOString(), tasks: [],
-    };
-    setPreview(set); setProgress({ done: 0, total });
-    let i = 0;
-    clearInterval(timer.current);
-    timer.current = setInterval(() => {
-      const e = pool[i % pool.length]!;
-      const t = exampleToTask(e, i);
-      if (tab === "topic") t.label = String(i + 1);
-      i++;
-      setPreview((p) => p && { ...p, tasks: [...p.tasks, t], totalPoints: p.totalPoints + t.points });
-      setProgress({ done: i, total });
-      if (i >= Math.min(total, pool.length)) { clearInterval(timer.current); setProgress({ done: total, total }); }
-    }, 350);
+  /** Puts a task in its place on the sheet (new or regenerated). */
+  const upsert = (task: Task) =>
+    setPreview((p) => {
+      if (!p) return p;
+      const tasks = [...p.tasks.filter((t) => t.label !== task.label), task].sort(
+        (a, b) => a.position - b.position,
+      );
+      return { ...p, tasks, totalPoints: tasks.reduce((n, t) => n + t.points, 0) };
+    });
+
+  async function start() {
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+    setError(null);
+    let slots: Slot[];
+    try {
+      slots =
+        tab === "topic"
+          ? planTopicSet({ course, topics: [...topics], kind, count })
+          : planMockExam(course, part);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+      return;
+    }
+    slotsRef.current = slots;
+    // Until Lovable Cloud is connected, tasks come from the mock generator (no model calls).
+    const generate = createMockGenerator(EXAMPLE_TASKS, { course });
+    generatorRef.current = generate;
+    const chosen = [...topics];
+    setPreview({
+      id: "preview",
+      title:
+        tab === "mock"
+          ? `Bandomasis egzaminas ${course}, ${part} dalis`
+          : `Teminis rinkinys: ${chosen.slice(0, 3).join(", ")}${chosen.length > 3 ? " …" : ""}`,
+      mode: tab,
+      course,
+      examPart: tab === "mock" ? part : null,
+      totalPoints: 0,
+      createdAt: new Date().toISOString(),
+      tasks: [],
+    });
+    setProgress({ done: 0, total: slots.length });
+    const { failed } = await runGeneration(slots, generate, {
+      signal: controller.signal,
+      onTask: upsert,
+      onProgress: (done, total) => setProgress({ done, total }),
+    });
+    if (failed > 0 && !controller.signal.aborted) {
+      setError(`Nepavyko sugeneruoti ${failed} uždavinių. Pabandykite dar kartą.`);
+    }
+  }
+
+  async function regenerate(task: Task) {
+    const slot = slotsRef.current.find((s) => s.label === task.label);
+    const generate = generatorRef.current;
+    if (!slot || !generate) return;
+    try {
+      upsert(await generate(slot));
+    } catch {
+      setError(`Nepavyko iš naujo sugeneruoti ${task.label} uždavinio.`);
+    }
   }
 
   const busy = !!progress && progress.done < progress.total;
@@ -120,9 +170,14 @@ function Generate() {
           {progress && !busy && <Link to="/rinkinys/$id" params={{ id: "demo-b-ii" }} className="btn-secondary">Atidaryti pavyzdinį rinkinį</Link>}
         </div>
         {remaining < total && <p className="border border-foreground p-3 text-sm">Šiandienos limitas beveik išnaudotas. Rytoj vėl galėsite generuoti naujų uždavinių.</p>}
+        {error && <p className="border border-foreground p-3 text-sm font-bold">{error}</p>}
       </div>
 
-      {preview && <div className="-mx-4 mt-8 sm:mx-0"><ExamSheet set={preview} /></div>}
+      {preview && (
+        <div className="-mx-4 mt-8 sm:mx-0">
+          <ExamSheet set={preview} onRegenerate={regenerate} />
+        </div>
+      )}
     </div>
   );
 }

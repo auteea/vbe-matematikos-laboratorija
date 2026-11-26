@@ -1,10 +1,29 @@
 import { useState } from "react";
-import type { Task } from "@/lib/types";
+import type { AnswerItem, Task } from "@/lib/types";
 import { pointsLabel } from "@/lib/points";
 import { Md } from "./Md";
 
 export function Points({ n }: { n: number }) {
   return <span className="shrink-0 italic">({pointsLabel(n)})</span>;
+}
+
+/** Shows the LaTeX display form of an answer, or the plain checker value when there is none. */
+export function AnswerText({ answer }: { answer: AnswerItem }) {
+  return answer.display ? (
+    <Md inline>{answer.display}</Md>
+  ) : (
+    <span className="font-mono text-sm">{answer.value}</span>
+  );
+}
+
+/** "11.1. … ; 11.2. …" for the printed answer key. */
+export function answerSummary(task: Task): string {
+  return task.answer
+    .map((a, i) => {
+      const label = task.parts[i] ? `${task.parts[i].label}. ` : "";
+      return label + (a.display ?? a.value);
+    })
+    .join("; ");
 }
 
 export function TaskBlock({ task, interactive = true, onRegenerate }: {
@@ -60,7 +79,12 @@ export function TaskBlock({ task, interactive = true, onRegenerate }: {
       {interactive && showAns && (
         <div className="no-print mt-3 ml-7 border-l-2 border-foreground pl-3">
           <div className="exam-label mb-1">Atsakymas</div>
-          {task.answer.map((a, i) => <Md key={i}>{a}</Md>)}
+          {task.answer.map((a, i) => (
+            <div key={i} className="flex items-baseline gap-2">
+              {task.parts[i] && <b>{task.parts[i].label}.</b>}
+              <AnswerText answer={a} />
+            </div>
+          ))}
         </div>
       )}
       {interactive && showSol && (

@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
-import type { TaskSet } from "@/lib/types";
+import type { Task, TaskSet } from "@/lib/types";
 import { COURSE_NAMES } from "@/config/topics";
 import { getTemplate } from "@/config/examTemplates";
 import { pointsLabel } from "@/lib/points";
-import { TaskBlock } from "./TaskBlock";
+import { TaskBlock, answerSummary } from "./TaskBlock";
 import { Md } from "./Md";
 
 export function SheetFrame({ title, right, children }: { title: string; right: string; children: ReactNode }) {
@@ -32,14 +32,24 @@ export function SectionTitle({ title, instruction }: { title: string; instructio
 
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString("lt-LT");
 
-export function ExamSheet({ set, interactive = true }: { set: TaskSet; interactive?: boolean }) {
+export function ExamSheet({
+  set,
+  interactive = true,
+  onRegenerate,
+}: {
+  set: TaskSet;
+  interactive?: boolean;
+  /** Called by a task's "Generuoti iš naujo" button. */
+  onRegenerate?: (task: Task) => void;
+}) {
   const tpl = set.examPart ? getTemplate(set.course, set.examPart) : null;
+  const ordered = [...set.tasks].sort((a, b) => a.position - b.position);
   const sections = tpl
     ? tpl.sections.map((s) => {
         const nums = new Set(s.slots.map((x) => String(x.number)));
-        return { ...s, tasks: set.tasks.filter((t) => nums.has(t.label)) };
+        return { ...s, tasks: ordered.filter((t) => nums.has(t.label)) };
       })
-    : [{ title: "", instruction: "", tasks: set.tasks }];
+    : [{ title: "", instruction: "", tasks: ordered }];
 
   return (
     <SheetFrame title={set.title} right={COURSE_NAMES[set.course]}>
@@ -56,7 +66,14 @@ export function ExamSheet({ set, interactive = true }: { set: TaskSet; interacti
       {sections.map((s, i) => (
         <section key={i}>
           {s.title && <SectionTitle title={s.title} instruction={s.instruction} />}
-          {s.tasks.map((t) => <TaskBlock key={t.id} task={t} interactive={interactive} {...(interactive ? { onRegenerate: () => {} } : {})} />)}
+          {s.tasks.map((t) => (
+            <TaskBlock
+              key={t.id}
+              task={t}
+              interactive={interactive}
+              {...(interactive && onRegenerate ? { onRegenerate: () => onRegenerate(t) } : {})}
+            />
+          ))}
         </section>
       ))}
 
@@ -65,12 +82,14 @@ export function ExamSheet({ set, interactive = true }: { set: TaskSet; interacti
         <table className="w-full border-collapse text-sm">
           <thead><tr>{["Užd.", "Sprendimas ir atsakymas", "Taškai"].map((h) => <th key={h} className="border border-foreground p-1">{h}</th>)}</tr></thead>
           <tbody>
-            {set.tasks.map((t) => (
+            {ordered.map((t) => (
               <tr key={t.id} className="exam-task">
                 <td className="border border-foreground p-1 text-center align-top font-bold">{t.label}</td>
                 <td className="border border-foreground p-1">
                   {t.solution.map((s, i) => <Md key={i}>{s.text}</Md>)}
-                  <div className="font-bold">Atsakymas: {t.answer.join("; ")}</div>
+                  <div className="font-bold">
+                    <Md inline>{`Atsakymas: ${answerSummary(t)}`}</Md>
+                  </div>
                 </td>
                 <td className="border border-foreground p-1 text-center align-top">{t.points}</td>
               </tr>

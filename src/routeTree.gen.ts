@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GeneruotiRouteImport } from './routes/generuoti'
+import { Route as ManoRinkiniaiRouteImport } from './routes/mano-rinkiniai'
+import { Route as PrisijungtiRouteImport } from './routes/prisijungti'
+import { Route as AdminPavyzdziaiRouteImport } from './routes/admin/pavyzdziai'
+import { Route as RinkinysIdRouteImport } from './routes/rinkinys.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GeneruotiRoute = GeneruotiRouteImport.update({
+  id: '/generuoti',
+  path: '/generuoti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManoRinkiniaiRoute = ManoRinkiniaiRouteImport.update({
+  id: '/mano-rinkiniai',
+  path: '/mano-rinkiniai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrisijungtiRoute = PrisijungtiRouteImport.update({
+  id: '/prisijungti',
+  path: '/prisijungti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPavyzdziaiRoute = AdminPavyzdziaiRouteImport.update({
+  id: '/admin/pavyzdziai',
+  path: '/admin/pavyzdziai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RinkinysIdRoute = RinkinysIdRouteImport.update({
+  id: '/rinkinys/$id',
+  path: '/rinkinys/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/generuoti': typeof GeneruotiRoute
+  '/mano-rinkiniai': typeof ManoRinkiniaiRoute
+  '/prisijungti': typeof PrisijungtiRoute
+  '/admin/pavyzdziai': typeof AdminPavyzdziaiRoute
+  '/rinkinys/$id': typeof RinkinysIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/generuoti': typeof GeneruotiRoute
+  '/mano-rinkiniai': typeof ManoRinkiniaiRoute
+  '/prisijungti': typeof PrisijungtiRoute
+  '/admin/pavyzdziai': typeof AdminPavyzdziaiRoute
+  '/rinkinys/$id': typeof RinkinysIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/generuoti': typeof GeneruotiRoute
+  '/mano-rinkiniai': typeof ManoRinkiniaiRoute
+  '/prisijungti': typeof PrisijungtiRoute
+  '/admin/pavyzdziai': typeof AdminPavyzdziaiRoute
+  '/rinkinys/$id': typeof RinkinysIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/generuoti'
+    | '/mano-rinkiniai'
+    | '/prisijungti'
+    | '/admin/pavyzdziai'
+    | '/rinkinys/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/generuoti'
+    | '/mano-rinkiniai'
+    | '/prisijungti'
+    | '/admin/pavyzdziai'
+    | '/rinkinys/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/generuoti'
+    | '/mano-rinkiniai'
+    | '/prisijungti'
+    | '/admin/pavyzdziai'
+    | '/rinkinys/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GeneruotiRoute: typeof GeneruotiRoute
+  ManoRinkiniaiRoute: typeof ManoRinkiniaiRoute
+  PrisijungtiRoute: typeof PrisijungtiRoute
+  AdminPavyzdziaiRoute: typeof AdminPavyzdziaiRoute
+  RinkinysIdRoute: typeof RinkinysIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/generuoti': {
+      id: '/generuoti'
+      path: '/generuoti'
+      fullPath: '/generuoti'
+      preLoaderRoute: typeof GeneruotiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mano-rinkiniai': {
+      id: '/mano-rinkiniai'
+      path: '/mano-rinkiniai'
+      fullPath: '/mano-rinkiniai'
+      preLoaderRoute: typeof ManoRinkiniaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prisijungti': {
+      id: '/prisijungti'
+      path: '/prisijungti'
+      fullPath: '/prisijungti'
+      preLoaderRoute: typeof PrisijungtiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/pavyzdziai': {
+      id: '/admin/pavyzdziai'
+      path: '/admin/pavyzdziai'
+      fullPath: '/admin/pavyzdziai'
+      preLoaderRoute: typeof AdminPavyzdziaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rinkinys/$id': {
+      id: '/rinkinys/$id'
+      path: '/rinkinys/$id'
+      fullPath: '/rinkinys/$id'
+      preLoaderRoute: typeof RinkinysIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GeneruotiRoute: GeneruotiRoute,
+  ManoRinkiniaiRoute: ManoRinkiniaiRoute,
+  PrisijungtiRoute: PrisijungtiRoute,
+  AdminPavyzdziaiRoute: AdminPavyzdziaiRoute,
+  RinkinysIdRoute: RinkinysIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

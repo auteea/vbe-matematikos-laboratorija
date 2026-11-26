@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Topics and mock-exam templates live in src/config/topics.ts and src/config/examTemplates.ts; the user edits them, so read structure from there instead of hardcoding.
+- Exam-paper look is built from utilities in src/styles.css (btn-primary, btn-secondary, exam-input, exam-label, double-rule, .exam-sheet); reuse them so all pages stay black-on-white with radius 0.
+- Print uses window.print() with body[data-print="tasks"|"solutions"] and .no-print/.print-only classes.
+- Step 1 uses mock data in src/data/mockSets.ts; replace with Lovable Cloud reads when the backend is added.

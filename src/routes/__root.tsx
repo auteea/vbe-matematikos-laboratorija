@@ -12,6 +12,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { useRouterState } from "@tanstack/react-router";
+import { TopBar } from "../components/TopBar";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -81,20 +84,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "VBE uždavinių generatorius" },
+      { name: "description", content: "DI generuojami VBE matematikos uždaviniai su sprendimais." },
+      { property: "og:title", content: "VBE uždavinių generatorius" },
+      { property: "og:description", content: "DI generuojami VBE matematikos uždaviniai su sprendimais." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
@@ -106,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="lt">
       <head>
         <HeadContent />
       </head>
@@ -120,11 +122,16 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const onLogin = useRouterState({ select: (s) => s.location.pathname.startsWith("/prisijungti") });
 
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      {!onLogin && <TopBar />}
+      <main className="pb-12">
+        <Outlet />
+      </main>
+      <Toaster />
     </QueryClientProvider>
   );
 }

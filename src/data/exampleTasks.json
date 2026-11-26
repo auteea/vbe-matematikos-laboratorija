@@ -1,0 +1,963 @@
+[
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Skaičių aibės",
+    "format": "short",
+    "points": 1,
+    "statement": "Raskite aibių $A = \\{1; 3; 5\\}$ ir $B = \\{3; 5; 7\\}$ sankirtą $A \\cap B$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 1 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Šaknys",
+    "format": "short",
+    "points": 1,
+    "statement": "Nustatykite $n$ reikšmę, kad lygybė $\\sqrt[3]{125 \\cdot 16} = n \\cdot \\sqrt[3]{2}$ būtų teisinga.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 2 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Funkcijos",
+    "format": "short",
+    "points": 1,
+    "statement": "Koordinačių plokštumoje nubrėžti funkcijų $y = x^2 - 3$ ir $y = \\frac{1}{x}$ grafikai. Nustatykite, kiek sprendinių turi lygtis $\\frac{1}{x} = x^2 - 3$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 3 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Sinusas, kosinusas ir tangentas",
+    "format": "short",
+    "points": 1,
+    "statement": "Vienetiniame apskritime, kurio centras yra taškas $O(0; 0)$, pažymėtas posūkio kampas $\\alpha$: judantysis spindulys iš teigiamosios $Ox$ ašies krypties pasukamas prieš laikrodžio rodyklę, kol pirmą kartą sutampa su neigiamąja $Oy$ ašies dalimi. Nustatykite posūkio kampo $\\alpha$ didumą.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 4 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Realiojo skaičiaus modulis",
+    "format": "short",
+    "points": 1,
+    "statement": "Apskaičiuokite reiškinio $-2 \\cdot \\sqrt{(-4)^2} - 4 \\cdot |-2|$ reikšmę.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 5 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Logaritmai",
+    "format": "short",
+    "points": 1,
+    "statement": "Nustatykite reiškinio $\\log_5(x^2 - 25)$ apibrėžimo sritį.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 6 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Progresijos",
+    "format": "short",
+    "points": 1,
+    "statement": "Į banko sąskaitą 2026 m. sausio 1 d. buvo padėtas 10000 Eur indėlis. Bankas moka 2 procentus metinių sudėtinių palūkanų (palūkanas bankas priskaičiuoja kiekvienų metų pabaigoje). Apskaičiuokite, po kelerių metų šioje banko sąskaitoje bus lygiai 10612,08 Eur.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 7 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Tiesės, plokštumos, kampai erdvėje",
+    "format": "short",
+    "points": 1,
+    "statement": "Duotas kubas $ABCDA_1B_1C_1D_1$ ($ABCD$ – apatinis pagrindas, viršūnės $A_1, B_1, C_1, D_1$ yra atitinkamai virš $A, B, C, D$). Nustatykite, kiek yra kubo briaunų, per kurias einančios tiesės yra prasilenkiančios su tiese, einančia per kubo briauną $CC_1$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 8 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Sinusas, kosinusas ir tangentas",
+    "format": "short",
+    "points": 1,
+    "statement": "Suprastinkite reiškinį $\\sin(\\alpha + 360^\\circ) + \\sin(\\alpha - 360^\\circ)$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 9 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Rinkiniai (kėliniai, gretiniai, deriniai) ir tikimybės",
+    "format": "short",
+    "points": 1,
+    "statement": "Klasės mokiniai iš 8 kandidatų renka klasės seniūną ir jo pavaduotoją. Apskaičiuokite, kiek skirtingų seniūno ir pavaduotojo porų galima išrinkti.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 10 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Lygtys",
+    "format": "full",
+    "points": 10,
+    "statement": "Išspręskite lygtis:",
+    "parts": [
+      {
+        "label": "11.1",
+        "statement": "$-10x^3 + 10000 = 0$",
+        "points": 2
+      },
+      {
+        "label": "11.2",
+        "statement": "$\\log_4(5x - 4) = \\log_4(x)$",
+        "points": 2
+      },
+      {
+        "label": "11.3",
+        "statement": "$2^x \\cdot 16^x = 8$",
+        "points": 3
+      },
+      {
+        "label": "11.4",
+        "statement": "$2\\sin x + 1 = 0$, kai $x \\in (0^\\circ; 360^\\circ)$",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 11 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Progresijos",
+    "format": "full",
+    "points": 7,
+    "statement": "Bėgikė Aistė dešimt dienų treniravosi pagal sudarytą treniruočių planą: pirmąją dieną Aistė nubėgo 2 km, kiekvieną kitą dieną ji nubėgo po tiek pat kilometrų daugiau negu buvo nubėgusi prieš tai buvusiąją dieną, o paskutinę dešimtąją dieną ji nubėgo 11 km.",
+    "parts": [
+      {
+        "label": "12.1",
+        "statement": "Apskaičiuokite, keliais kilometrais daugiau Aistė nubėgo dešimtąją dieną negu devintąją dieną.",
+        "points": 2
+      },
+      {
+        "label": "12.2",
+        "statement": "Apskaičiuokite, kiek kilometrų Aistė iš viso nubėgo per 10 dienų.",
+        "points": 2
+      },
+      {
+        "label": "12.3",
+        "statement": "Po dešimtosios treniruotės dienos Aistė nusprendė tęsti treniruotes pagal tą patį planą. Nustatykite, kelintą treniruočių dieną bendras Aistės nubėgto kelio ilgis viršys 150 km.",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 12 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Briaunainiai, sukiniai",
+    "format": "full",
+    "points": 7,
+    "statement": "Žiemos šventei buvo sumanyta pagaminti kūgio formos dekoraciją, kurios pagrindo spindulys lygus 6 m, o aukštis – 8 m.",
+    "parts": [
+      {
+        "label": "13.1",
+        "statement": "Inžinieriai ruošiasi šios dekoracijos šoninį išorinį paviršių padengti apsaugine medžiaga. Apskaičiuokite šios dekoracijos šoninio išorinio paviršiaus plotą kvadratiniais metrais. Atsakymą pateikite su $\\pi$.",
+        "points": 3
+      },
+      {
+        "label": "13.2",
+        "statement": "Norėdami, kad dekoracija būtų tvirta, inžinieriai jos viduje planuoja įtvirtinti plokštę, kuri eitų per dekoracijos ribojamo kūgio ašinį pjūvį. Apskaičiuokite šios plokštės plotą kvadratiniais metrais. Į dekoracijos sienelių storį neatsižvelkite.",
+        "points": 2
+      },
+      {
+        "label": "13.3",
+        "statement": "Apskaičiuokite dekoracijos ribojamo kūgio sudaromosios ir pagrindo plokštumos sudaromo kampo didumo tangentą.",
+        "points": 2
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 13 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Logaritmai",
+    "format": "full",
+    "points": 3,
+    "statement": "Mokiniai laboratorinio darbo metu stebėjo, kaip greitai vėsta iki $100\\,^\\circ\\mathrm{C}$ įkaitintas metalinis strypas. Buvo pastebėta, kad, praėjus $t$ minučių nuo aušinimo pradžios, strypo temperatūra $T\\,^\\circ\\mathrm{C}$ yra lygi $T = 100 - 20 \\cdot \\lg(t + 1)$. Nustatykite, ar šio strypo temperatūra po 1 minutės nuo aušinimo pradžios bus žemesnė nei $90\\,^\\circ\\mathrm{C}$. Atsakymą pagrįskite.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 14 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Skaičių aibės",
+    "format": "full",
+    "points": 3,
+    "statement": "Visi mokyklos aštuntokai lanko bent vieną iš trijų būrelių: sporto, muzikos, gamtos. Veno diagramoje pavaizduota, kiek aštuntokų lanko šiuos būrelius: tik sporto būrelį lanko 12 aštuntokų, tik sporto ir muzikos (be gamtos) – 6, visus tris būrelius – 2, tik gamtos – 11, tik sporto ir gamtos (be muzikos) – $x$, tik muzikos ir gamtos (be sporto) – $y$, tik muzikos – $z$. Iš viso sporto būrelį lanko 24 aštuntokai, muzikos – 23, gamtos – 22. Naudodamiesi pateikta informacija, apskaičiuokite, kiek aštuntokų mokosi mokykloje.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 15 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Funkcijos išvestinė",
+    "format": "full",
+    "points": 8,
+    "statement": "Ūkininkas 800 metrų tvoros tinklu ruošiasi aptverti stačiakampio formos ganyklą. Ganyklos vieno krašto ilgį pažymėkite $x$ metrų.",
+    "parts": [
+      {
+        "label": "16.1",
+        "statement": "Parodykite, kad ganyklos plotas $S$ (kv. metrais) išreiškiamas funkcija $S(x) = 400x - x^2$.",
+        "points": 2
+      },
+      {
+        "label": "16.2",
+        "statement": "Raskite $S'(x)$.",
+        "points": 1
+      },
+      {
+        "label": "16.3",
+        "statement": "Nustatykite, kokio ilgio $x$ (metrais) turi būti ganyklos vienas kraštas, kad ganyklos plotas būtų didžiausias.",
+        "points": 3
+      },
+      {
+        "label": "16.4",
+        "statement": "Apskaičiuokite didžiausią galimą šios ganyklos plotą (kvadratiniais metrais).",
+        "points": 2
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 16 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Rinkiniai (kėliniai, gretiniai, deriniai) ir tikimybės",
+    "format": "full",
+    "points": 8,
+    "statement": "Pašto skirstymo centre yra 20 vienodo dydžio siuntų: registruotų ir neregistruotų. Tikimybė atsitiktinai paimti registruotą siuntą yra $0{,}3$.",
+    "parts": [
+      {
+        "label": "17.1",
+        "statement": "Apskaičiuokite, kokia yra tikimybė atsitiktinai paimti neregistruotą siuntą.",
+        "points": 2
+      },
+      {
+        "label": "17.2",
+        "statement": "Apskaičiuokite, kiek registruotų siuntų yra pašto skirstymo centre.",
+        "points": 2
+      },
+      {
+        "label": "17.3",
+        "statement": "Pašto kurjeris atsitiktinai paima dvi siuntas. Apskaičiuokite tikimybę, kad abi paimtos siuntos bus registruotos.",
+        "points": 4
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 17 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Tiesės, plokštumos, kampai erdvėje",
+    "format": "full",
+    "points": 4,
+    "statement": "Duota plokštuma $\\alpha$ ir tai plokštumai nepriklausantis taškas $A$. Iš taško $A$ į plokštumą $\\alpha$ nubrėžtos dvi atkarpos: pasviroji $AB$ ir statmuo $AC$.",
+    "parts": [
+      {
+        "label": "18.1",
+        "statement": "Apskaičiuokite atstumą (cm) tarp taškų $A$ ir $B$, jeigu atstumas nuo taško $A$ iki plokštumos $\\alpha$ lygus 16 cm, o pasvirosios $AB$ statmenosios projekcijos plokštumoje $\\alpha$ ilgis lygus 63 cm.",
+        "points": 2
+      },
+      {
+        "label": "18.2",
+        "statement": "Apskaičiuokite kampo, kurį sudaro pasviroji $AB$ su plokštuma $\\alpha$, didumą. Atsakymą pateikite dešimtųjų tikslumu.",
+        "points": 2
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, bendrasis kursas, 18 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Skaičių aibės",
+    "format": "short",
+    "points": 1,
+    "statement": "Raskite aibių $A = [-5; 3)$ ir $B = [0; 2]$ sąjungą.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 1 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Šaknys",
+    "format": "short",
+    "points": 1,
+    "statement": "Panaikinkite iracionalumą trupmenos $\\frac{m}{\\sqrt{5} - 2}$ vardiklyje.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 2 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Atsitiktiniai dydžiai",
+    "format": "short",
+    "points": 1,
+    "statement": "Atsitiktinio dydžio $X$ skirstinys pateiktas lentele. Apskaičiuokite šio atsitiktinio dydžio matematinę viltį $\\mathbf{E}X$.\n\n| $m$ | $-4$ | $1$ | $6$ | $2$ |\n|---|---|---|---|---|\n| $\\mathbf{P}(X = m)$ | $\\frac{1}{5}$ | $\\frac{32}{125}$ | $\\frac{8}{25}$ | $\\frac{28}{125}$ |",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 3 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Funkcijos",
+    "format": "short",
+    "points": 1,
+    "statement": "Apskaičiuokite funkcijų $y = \\left(\\frac{1}{5}\\right)^x$ ir $y = 5^{x+2}$ grafikų susikirtimo taško koordinates.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 4 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Rinkiniai (kėliniai, gretiniai, deriniai) ir tikimybės",
+    "format": "short",
+    "points": 1,
+    "statement": "Agnė sugalvojo triženklį natūralųjį skaičių. Kokia tikimybė, kad Agnės sugalvoto skaičiaus visi trys skaitmenys yra skirtingi?",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 5 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Funkcijos išvestinė",
+    "format": "short",
+    "points": 1,
+    "statement": "Funkcijos $y = f(x)$ grafiko taške $A(3; 4)$ nubrėžta liestinė, kuri eina per taškus $(0; 10)$ ir $(5; 0)$. Nustatykite funkcijos $y = f(x)$ išvestinės reikšmę taške $x = 3$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 6 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Sinusas, kosinusas ir tangentas",
+    "format": "short",
+    "points": 1,
+    "statement": "Žinoma, kad $\\sin\\alpha + \\cos\\alpha = 0{,}8$. Apskaičiuokite $\\sin(2\\alpha)$ reikšmę.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 7 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Vektoriai",
+    "format": "short",
+    "points": 1,
+    "statement": "Žinoma, kad vektoriai $\\vec{a} = -3\\vec{i} + 2\\vec{j}$ ir $\\vec{b} = (x; y)$ yra priešpriešiniai. Vektoriaus $\\vec{b}$ ilgis lygus $2\\sqrt{13}$. Nustatykite vektoriaus $\\vec{b}$ koordinates $x$ ir $y$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 8 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Pirmykštė funkcija ir integralas",
+    "format": "short",
+    "points": 1,
+    "statement": "Žinoma, kad kūno greitis $v$ metrais per sekundę (m/s) yra judėjimo laiko $t$ funkcija $v(t) = 2t$, kur $t$ – judėjimo laikas sekundėmis (s). Nustatykite kūno nueitą kelią metrais (m) per pirmąsias 5 judėjimo sekundes.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 9 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Logaritmai",
+    "format": "short",
+    "points": 1,
+    "statement": "Žinoma, kad $2^x = 15$ ir $15^y = 32$. Nustatykite sandaugos $x \\cdot y$ reikšmę.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 10 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Nelygybės",
+    "format": "full",
+    "points": 8,
+    "statement": "Išspręskite nelygybes:",
+    "parts": [
+      {
+        "label": "11.1",
+        "statement": "$\\frac{1}{x - 3} \\le 1$",
+        "points": 3
+      },
+      {
+        "label": "11.2",
+        "statement": "$\\log_2(x + 3) > 3$",
+        "points": 2
+      },
+      {
+        "label": "11.3",
+        "statement": "$\\cos x < -\\frac{1}{2}$",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 11 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Sinusas, kosinusas ir tangentas",
+    "format": "full",
+    "points": 2,
+    "statement": "Suprastinkite reiškinį $\\sin(\\alpha + 3\\pi) + \\cos(\\alpha - 3\\pi)$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 12 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Progresijos",
+    "format": "full",
+    "points": 6,
+    "statement": "Bendrovė „Gražiagirė“ planuoja sutvarkyti 2000 hektarų miško plotą. Pirmaisiais metais bendrovė sutvarkė 12 hektarų miško. Kiekvienais kitais metais bendrovė planuoja sutvarkyti 1,5 karto didesnį plotą negu ji sutvarkė praėjusiais metais.",
+    "parts": [
+      {
+        "label": "13.1",
+        "statement": "Apskaičiuokite, kiek hektarų miško bendrovė planuoja sutvarkyti 7-aisiais metais. Atsakymą parašykite hektarais vienetų tikslumu.",
+        "points": 2
+      },
+      {
+        "label": "13.2",
+        "statement": "Kiek iš viso hektarų miško bendrovė planuoja sutvarkyti per pirmus 8 metus? Atsakymą parašykite hektarais dešimčių tikslumu.",
+        "points": 2
+      },
+      {
+        "label": "13.3",
+        "statement": "Per kiek metų bendrovė planuoja sutvarkyti visą 2000 hektarų plotą?",
+        "points": 2
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 13 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Vektoriai",
+    "format": "full",
+    "points": 5,
+    "statement": "Duotas lygiagretainis $ABCD$, kurio $AB = 3$, $AD = 4$, o $\\angle A = 60^\\circ$. Lygiagretainio kraštinėse $AB$ ir $DC$ yra pažymėti taškai $E$ ir $F$ taip, kad $AE : EB = CF : FD = 2 : 1$. Žinoma, kad $\\overrightarrow{AB} = \\vec{a}$ ir $\\overrightarrow{AD} = \\vec{b}$.",
+    "parts": [
+      {
+        "label": "14.1",
+        "statement": "Vektorių $\\overrightarrow{EF}$ išreikškite vektoriais $\\vec{a}$ ir $\\vec{b}$.",
+        "points": 2
+      },
+      {
+        "label": "14.2",
+        "statement": "Apskaičiuokite vektorių $\\overrightarrow{EF}$ ir $\\overrightarrow{CF}$ skaliarinę sandaugą.",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 14 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Funkcijos išvestinė",
+    "format": "full",
+    "points": 9,
+    "statement": "Ritinio formos uždaros skardinės viso paviršiaus plotas lygus 50 cm².",
+    "parts": [
+      {
+        "label": "15.1",
+        "statement": "Ritinio spindulio ilgį pažymėję $r$ (cm), parodykite, kad šios ritinio formos skardinės tūrį $V$ (cm³) galima išreikšti funkcija $V(r) = 25r - \\pi r^3$.",
+        "points": 3
+      },
+      {
+        "label": "15.2",
+        "statement": "Raskite $V'(r)$.",
+        "points": 2
+      },
+      {
+        "label": "15.3",
+        "statement": "Apskaičiuokite didžiausią galimą šios skardinės tūrį (cm³). Skaičiuodami vietoje $\\pi$ imkite 3. Atsakymą pateikite vienetų tikslumu.",
+        "points": 4
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 15 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Briaunainiai, sukiniai",
+    "format": "full",
+    "points": 4,
+    "statement": "Duota taisyklingoji keturkampė piramidė $EABCD$, jos aukštinė $EO$ ir piramidės šoninės sienos $EBC$ aukštinė $EK$. Žinoma, kad piramidės pagrindo kraštinės $AB$ ilgis lygus 8 cm, o piramidės šoninės briaunos $EB$ ilgis lygus 10 cm.",
+    "parts": [
+      {
+        "label": "16.1",
+        "statement": "Apskaičiuokite piramidės aukštinės $EO$ ilgį.",
+        "points": 2
+      },
+      {
+        "label": "16.2",
+        "statement": "Apskaičiuokite kampo, kurį sudaro šios piramidės šoninė siena $EBC$ su piramidės pagrindu $ABCD$, didumą laipsniais. Atsakymą pateikite dešimtųjų tikslumu.",
+        "points": 2
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 16 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Rinkiniai (kėliniai, gretiniai, deriniai) ir tikimybės",
+    "format": "full",
+    "points": 6,
+    "statement": "Kavinėje vyksta reklamos akcija: kiekvienas lankytojas, nusipirkęs kakavos puodelį, iš dėžės atsitiktinai traukia vieną lipduką, kuriame yra nurodyta nuolaida kitam apsilankymui. Dėžėje yra 10 lipdukų su 5 % nuolaida, 6 lipdukai su 10 % nuolaida ir 4 lipdukai, rodantys nemokamą bandelę. Reklamos akcija vyks tol, kol lankytojas ištrauks paskutinį dėžėje esantį lipduką.",
+    "parts": [
+      {
+        "label": "17.1",
+        "statement": "Apskaičiuokite tikimybę, kad pirmasis kavinės lankytojas ištrauks 10 % nuolaidos lipduką.",
+        "points": 1
+      },
+      {
+        "label": "17.2",
+        "statement": "Pirmasis lankytojas ištraukė lipduką su 5 % nuolaida (lipdukai į dėžę negrąžinami). Kokia tikimybė, kad antrasis lankytojas ištrauks nemokamos bandelės lipduką?",
+        "points": 2
+      },
+      {
+        "label": "17.3",
+        "statement": "Du draugai vienu metu nusiperka po puodelį kakavos ir abu traukia iš dėžės po vieną nuolaidos lipduką. Kokia tikimybė, kad abu draugai ištrauks lipdukus su vienoda nuolaida, t. y. abu ištrauks lipdukus su užrašyta 5 % nuolaida arba abu ištrauks lipdukus su užrašyta 10 % nuolaida, arba abu ištrauks lipdukus, rodančius nemokamą bandelę?",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 17 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Logaritmai",
+    "format": "full",
+    "points": 3,
+    "statement": "Žinoma, kad $a = \\log_2 m$ ir $b = \\log_m 7$ ($m > 0$, $m \\neq 1$). Pagrįskite, kad $\\log_{14} m = \\frac{a}{1 + ab}$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 18 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Lygtys",
+    "format": "full",
+    "points": 4,
+    "statement": "Įmonėje dirba 5 darbuotojai: Lina, Ignas, Vilija, Martynas ir Ona. Žinoma, kad kiekvieno iš jų sudaryto ketverto amžių suma (metais) yra lygi 132, 138, 113, 131 ir 126. Nustatykite, kiek metų yra vyriausiam šios įmonės darbuotojui.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 19 užd."
+  },
+  {
+    "course": "A",
+    "exam_part": "II",
+    "topic": "Tiesės, plokštumos, kampai erdvėje",
+    "format": "full",
+    "points": 3,
+    "statement": "Duotas kubas $ABCDEFGH$, kurio briaunos ilgis lygus $a$ ($ABCD$ – apatinis pagrindas, viršūnės $E, F, G, H$ yra atitinkamai virš $A, B, C, D$). Nubrėžtos šio kubo dviejų gretimų sienų įstrižainės $AF$ ir $BG$. Apskaičiuokite atstumą tarp tiesių $AF$ ir $BG$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "2026-03-04 VBE II dalies bandomasis patikrinimas, išplėstinis kursas, 20 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Skaičių aibės",
+    "format": "short",
+    "points": 1,
+    "statement": "Duotos dvi aibės: $A = \\{1; 4; 9; 16\\}$ ir $B = \\{9; 16; 25\\}$. Raskite šių aibių sankirtą $A \\cap B$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 1 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Laipsnis su racionaliuoju rodikliu",
+    "format": "short",
+    "points": 1,
+    "statement": "Nustatykite $a$ reikšmę, su kuria lygybė $4^{\\frac{2}{3}} = \\sqrt[3]{a}$ yra teisinga.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 2 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Funkcijos",
+    "format": "short",
+    "points": 1,
+    "statement": "Koordinačių plokštumoje nubrėžti funkcijų $y = x + 2$ ir $y = \\frac{2}{x}$ grafikai. Nustatykite, kiek sprendinių turi lygtis $x + 2 = \\frac{2}{x}$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 3 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Sinusas, kosinusas ir tangentas",
+    "format": "short",
+    "points": 1,
+    "statement": "Vienetiniame apskritime, kurio centras yra taškas $O(0; 0)$, pažymėtas posūkio kampas, kurio didumas lygus $\\alpha$: judantysis spindulys iš teigiamosios $Ox$ ašies krypties pasukamas prieš laikrodžio rodyklę ir, apsukęs visą ratą, vėl sutampa su teigiamąja $Ox$ ašies dalimi. Nustatykite, kam lygu $\\alpha$ (laipsniais).",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 4 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Realiojo skaičiaus modulis",
+    "format": "short",
+    "points": 1,
+    "statement": "Apskaičiuokite reiškinio $10 \\cdot \\sqrt{(-10)^2} - |-10|$ reikšmę.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 5 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Funkcijos",
+    "format": "short",
+    "points": 1,
+    "statement": "Nustatykite funkcijos $f(x) = \\sqrt{2x + 14}$ apibrėžimo sritį.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 6 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Šaknys",
+    "format": "short",
+    "points": 1,
+    "statement": "Panaikinkite iracionalumą trupmenos $\\frac{3}{\\sqrt{5} + 1}$ vardiklyje.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 7 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Sinusas, kosinusas ir tangentas",
+    "format": "short",
+    "points": 1,
+    "statement": "Yra žinoma, kad $\\sin^2(\\alpha) = 0{,}2$. Apskaičiuokite $\\cos^2(\\alpha)$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 8 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Rinkiniai (kėliniai, gretiniai, deriniai) ir tikimybės",
+    "format": "short",
+    "points": 1,
+    "statement": "Šachmatų turnyre dalyvavo 24 šachmatininkai. Kiekvienas iš jų su kiekvienu kitu turnyre dalyvavusiu šachmatininku sužaidė po vieną partiją. Apskaičiuokite, kiek iš viso šachmatų partijų buvo sužaista šiame turnyre.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 9 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Tiesės, plokštumos, kampai erdvėje",
+    "format": "short",
+    "points": 1,
+    "statement": "Duotas kubas $ABCDA_1B_1C_1D_1$ ($ABCD$ – apatinis pagrindas, viršūnės $A_1, B_1, C_1, D_1$ yra atitinkamai virš $A, B, C, D$) ir tiesė $CC_1$. Nurodykite **visas** kubo briaunas, kurios yra tiesėse, prasilenkiančiose su tiese $CC_1$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 10 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Lygtys",
+    "format": "full",
+    "points": 10,
+    "statement": "Išspręskite lygtis:",
+    "parts": [
+      {
+        "label": "11.1",
+        "statement": "$-3x^3 = 375$",
+        "points": 2
+      },
+      {
+        "label": "11.2",
+        "statement": "$\\log_2(2x - 6) = \\log_2 8$",
+        "points": 2
+      },
+      {
+        "label": "11.3",
+        "statement": "$2^x + 2^{x+3} = 36$",
+        "points": 3
+      },
+      {
+        "label": "11.4",
+        "statement": "$\\operatorname{tg} x - 1 = 0$, kai $x \\in (90^\\circ; 270^\\circ)$",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 11 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Progresijos",
+    "format": "full",
+    "points": 7,
+    "statement": "Rimas nusprendė taupyti pinigus naujam dviračiui. Pirmą sekmadienį jis į tuščią taupyklę įdėjo 12 eurų, o paskui kiekvieną kitą sekmadienį į šią taupyklę įdėdavo 3 eurais daugiau negu paskutinį praėjusį sekmadienį.",
+    "parts": [
+      {
+        "label": "12.1",
+        "statement": "Apskaičiuokite, kiek eurų Rimas įdėjo į taupyklę 5-ą sekmadienį.",
+        "points": 2
+      },
+      {
+        "label": "12.2",
+        "statement": "Apskaičiuokite, kiek eurų Rimas buvo sutaupęs per pirmus 8 sekmadienius.",
+        "points": 2
+      },
+      {
+        "label": "12.3",
+        "statement": "Nustatykite, kelintą sekmadienį Rimas į taupyklę pirmą kartą įdėjo triženklę eurų sumą.",
+        "points": 3
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 12 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Briaunainiai, sukiniai",
+    "format": "full",
+    "points": 5,
+    "statement": "Duota taisyklingoji keturkampė piramidė $EABCD$ ir jos aukštinė $EO$. Yra žinoma, kad piramidės pagrindo $ABCD$ įstrižainės $BD$ ilgis lygus 24, o piramidės šoninės briaunos $ED$ ilgis lygus 13.",
+    "parts": [
+      {
+        "label": "13.1",
+        "statement": "Apskaičiuokite piramidės aukštinės $EO$ ilgį.",
+        "points": 2
+      },
+      {
+        "label": "13.2",
+        "statement": "Nustatykite atkarpos, kuri yra piramidės briaunos $EA$ statmenoji projekcija piramidės pagrindo $ABCD$ plokštumoje, ilgį.",
+        "points": 1
+      },
+      {
+        "label": "13.3",
+        "statement": "Apskaičiuokite kampo, kurį sudaro piramidės šoninė briauna su piramidės pagrindo plokštuma, didumo kosinusą.",
+        "points": 2
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 13 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Logaritmai",
+    "format": "full",
+    "points": 3,
+    "statement": "Atlikdamas brandos darbą, mokinys tyrė, kaip mažėja bakterijų skaičius mėgintuvėlyje, esant bakterijoms nepalankioms sąlygoms. Tyrimo pradžioje mėgintuvėlyje buvo 20 milijonų bakterijų. Mokinys nustatė, kad mėgintuvėlyje esančių bakterijų skaičių $n$ (milijonais) galima apskaičiuoti pagal formulę $n = 5 + \\frac{15}{1 + 0{,}2 \\cdot \\log_2(t + 1)}$; čia $t$ – nuo tyrimo pradžios praėjusių parų skaičius. Nustatykite, kiek per pirmąsias 7 tyrimo paras sumažėjo bakterijų skaičius. Atsakymą pagrįskite.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 14 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Briaunainiai, sukiniai",
+    "format": "full",
+    "points": 4,
+    "statement": "Ritinio ašinio pjūvio $ABCD$ įstrižainės ilgis lygus 37, o ritinio pagrindo spindulio ilgis lygus 6. Apskaičiuokite šio ritinio tūrį. Atsakymą pateikite su $\\pi$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 15 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Funkcijos išvestinė",
+    "format": "full",
+    "points": 7,
+    "statement": "Sodininkas prie namo sienos ketina įsirengti stačiakampio formos gėlyną. Namo ir būsimo gėlyno planą sudaro du stačiakampiai: namas yra 12 m ilgio ir 9 m pločio, o gėlynas prigludęs prie 12 m ilgio namo sienos. Pagal planą gėlyną iš vienos pusės ribos namo siena, o iš kitų trijų pusių – dekoratyvinė tvorelė, kurios bendras ilgis 10 metrų. Šio gėlyno kraštinės, statmenos namo sienai, ilgį (metrais) pažymėkime $x$; čia $x \\in (0; 5)$.",
+    "parts": [
+      {
+        "label": "16.1",
+        "statement": "Parodykite, kad gėlyno plotą $S$ (kvadratiniais metrais) galima išreikšti funkcija, kurios formulė yra $S(x) = 10x - 2x^2$.",
+        "points": 2
+      },
+      {
+        "label": "16.2",
+        "statement": "Raskite funkcijos $S(x) = 10x - 2x^2$ išvestinę $S'(x)$.",
+        "points": 1
+      },
+      {
+        "label": "16.3",
+        "statement": "Nustatykite, koks turėtų būti gėlyno kraštinės ilgis $x$ (metrais), kad gėlyno plotas $S$ (kvadratiniais metrais) būtų didžiausias; čia $x \\in (0; 5)$.",
+        "points": 3
+      },
+      {
+        "label": "16.4",
+        "statement": "Apskaičiuokite didžiausią galimą šio gėlyno plotą $S$ (kvadratiniais metrais).",
+        "points": 1
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 16 užd. (brėžinys pakeistas tekstu)"
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Rinkiniai (kėliniai, gretiniai, deriniai) ir tikimybės",
+    "format": "full",
+    "points": 8,
+    "statement": "Knygų lentynoje yra tik matematikos ir istorijos knygos: 10 matematikos knygų ir $n$ istorijos knygų. Tikimybė, kad iš šios lentynos atsitiktinai paimta knyga bus istorijos, yra lygi $0{,}6$.",
+    "parts": [
+      {
+        "label": "17.1",
+        "statement": "Pagrįskite šį teiginį: „Tikimybė, kad iš šios lentynos atsitiktinai paimta knyga bus matematikos, yra mažesnė už tikimybę, kad ji bus istorijos.“",
+        "points": 2
+      },
+      {
+        "label": "17.2",
+        "statement": "Apskaičiuokite, kiek iš viso knygų yra šioje lentynoje.",
+        "points": 2
+      },
+      {
+        "label": "17.3",
+        "statement": "Iš šios lentynos atsitiktinai paimamos dvi knygos. Apskaičiuokite tikimybę, kad viena iš jų bus matematikos, o kita – istorijos.",
+        "points": 4
+      }
+    ],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 17 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Logaritmai",
+    "format": "full",
+    "points": 3,
+    "statement": "Yra žinoma, kad $a = 2^m$. Nustatykite, kam lygu $\\log_2\\left(\\frac{1}{a}\\right)$.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 18 užd."
+  },
+  {
+    "course": "B",
+    "exam_part": "II",
+    "topic": "Funkcijos išvestinė",
+    "format": "full",
+    "points": 3,
+    "statement": "Funkcijos $f(x) = \\frac{1}{3}x^3 - \\frac{7}{2}x^2 + 13x - 5$ grafikas eina per tašką $A(x_0; y_0)$. Yra žinoma, kad šios funkcijos grafiko liestinės taške $A$ krypties koeficientas yra teigiamas ir ši liestinė su $Ox$ ašimi sudaro $45^\\circ$ kampą. Nustatykite visas galimas $x_0$ reikšmes.",
+    "parts": [],
+    "answer": [],
+    "solution": [],
+    "source": "NŠA 2026-06-05 VBE II dalis, bendrasis kursas, pagrindinė sesija, 19 užd."
+  }
+]

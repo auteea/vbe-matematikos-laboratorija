@@ -9,7 +9,7 @@ import { planMockExam, planTopicSet, type Slot } from "@/lib/generation/plan";
 import { runGeneration, type GenerateFn } from "@/lib/generation/runner";
 import type { Task, TaskSet } from "@/lib/types";
 
-export const Route = createFileRoute("/generuoti")({
+export const Route = createFileRoute("/_authenticated/generuoti")({
   head: () => ({ meta: [ { title: "Generuoti uždavinius – VBE uždavinių generatorius" }, { name: "description", content: "Teminiai rinkiniai ir bandomieji VBE matematikos egzaminai." }, { property: "og:title", content: "Generuoti uždavinius – VBE uždavinių generatorius" }, { property: "og:description", content: "Teminiai rinkiniai ir bandomieji VBE matematikos egzaminai." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" } ] }),
   component: Generate,
 });

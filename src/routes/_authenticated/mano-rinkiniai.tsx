@@ -1,15 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { MOCK_SETS } from "@/data/mockSets";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import { COURSE_NAMES } from "@/config/topics";
+import { deleteSet, listSets, renameSet } from "@/lib/db";
 
-export const Route = createFileRoute("/mano-rinkiniai")({
+export const Route = createFileRoute("/_authenticated/mano-rinkiniai")({
   head: () => ({ meta: [ { title: "Mano rinkiniai – VBE uždavinių generatorius" }, { name: "description", content: "Jūsų išsaugoti VBE uždavinių rinkiniai." }, { property: "og:title", content: "Mano rinkiniai – VBE uždavinių generatorius" }, { property: "og:description", content: "Jūsų išsaugoti VBE uždavinių rinkiniai." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" } ] }),
   component: MySets,
 });
 
 function MySets() {
-  const [sets, setSets] = useState(MOCK_SETS);
+  const qc = useQueryClient();
+  const { data: sets = [], isLoading } = useQuery({ queryKey: ["sets"], queryFn: listSets });
+  const refresh = () => qc.invalidateQueries({ queryKey: ["sets"] });
+  const rename = useMutation({ mutationFn: (v: { id: string; title: string }) => renameSet(v.id, v.title), onSuccess: refresh, onError: () => toast.error("Nepavyko pervadinti") });
+  const remove = useMutation({ mutationFn: deleteSet, onSuccess: refresh, onError: () => toast.error("Nepavyko ištrinti") });
   return (
     <div className="mx-auto max-w-5xl px-4 pt-8">
       <h1 className="mb-4 text-center font-serif text-2xl font-bold">Mano rinkiniai</h1>
@@ -28,13 +33,14 @@ function MySets() {
                 <td className="whitespace-nowrap p-2 text-right">
                   <Link to="/rinkinys/$id" params={{ id: s.id }} className="btn-primary !px-2 !py-1 !text-xs">Atidaryti</Link>{" "}
                   <button className="btn-secondary !px-2 !py-1 !text-xs" onClick={() => {
-                    const t = prompt("Naujas pavadinimas", s.title); if (t) setSets((x) => x.map((y) => y.id === s.id ? { ...y, title: t } : y));
+                    const t = prompt("Naujas pavadinimas", s.title); if (t?.trim()) rename.mutate({ id: s.id, title: t.trim() });
                   }}>Pervadinti</button>{" "}
-                  <button className="btn-secondary !px-2 !py-1 !text-xs" onClick={() => confirm("Ištrinti rinkinį?") && setSets((x) => x.filter((y) => y.id !== s.id))}>Ištrinti</button>
+                  <button className="btn-secondary !px-2 !py-1 !text-xs" onClick={() => confirm("Ištrinti rinkinį?") && remove.mutate(s.id)}>Ištrinti</button>
                 </td>
               </tr>
             ))}
-            {sets.length === 0 && <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Rinkinių dar nėra.</td></tr>}
+            {!isLoading && sets.length === 0 && <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Rinkinių dar nėra.</td></tr>}
+            {isLoading && <tr><td colSpan={5} className="p-6 text-center text-muted-foreground">Įkeliama…</td></tr>}
           </tbody>
         </table>
       </div>

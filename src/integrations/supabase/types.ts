@@ -190,6 +190,38 @@ export type Database = {
         }
         Returns: boolean
       }
+      save_generated_task: {
+        Args: {
+          p_label: string
+          p_position: number
+          p_set_id: string
+          p_task: Json
+          p_user_id: string
+        }
+        Returns: {
+          answer: Json
+          attempts: number
+          created_at: string
+          format: string
+          id: string
+          label: string
+          options: Json | null
+          parts: Json
+          points: number
+          position: number
+          set_id: string
+          solution: Json
+          statement: string
+          topic: string
+          verified: boolean
+        }
+        SetofOptions: {
+          from: "*"
+          to: "tasks"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
     }
     Enums: {
       app_role: "admin"

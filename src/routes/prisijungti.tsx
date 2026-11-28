@@ -4,8 +4,10 @@ import { toast } from "sonner";
 import { SheetFrame } from "@/components/exam/ExamSheet";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
+import { loginMode, loginSearch } from "@/lib/loginMode";
 
 export const Route = createFileRoute("/prisijungti")({
+  validateSearch: loginSearch,
   head: () => ({ meta: [ { title: "Prisijungimas – VBE uždavinių generatorius" }, { name: "description", content: "Prisijunkite prie VBE uždavinių generatoriaus." }, { property: "og:title", content: "Prisijungimas – VBE uždavinių generatorius" }, { property: "og:description", content: "Prisijunkite prie VBE uždavinių generatoriaus." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" } ] }),
   component: Login,
 });
@@ -16,7 +18,8 @@ const GoogleG = () => (
 
 function Login() {
   const nav = useNavigate();
-  const [mode, setMode] = useState<"in" | "up">("in");
+  const search = Route.useSearch();
+  const mode = loginMode(search.mode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
@@ -59,7 +62,7 @@ function Login() {
           </form>
           <p className="mt-4 text-center text-sm">
             {mode === "in" ? "Neturite paskyros? " : "Jau turite paskyrą? "}
-            <button className="font-bold underline" onClick={() => setMode(mode === "in" ? "up" : "in")}>{mode === "in" ? "Registruotis" : "Prisijungti"}</button>
+            <button className="font-bold underline" onClick={() => nav({ to: "/prisijungti", search: { mode: mode === "in" ? "up" : "in" }, replace: true })}>{mode === "in" ? "Registruotis" : "Prisijungti"}</button>
           </p>
         </SheetFrame>
       </div>

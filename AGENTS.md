@@ -38,3 +38,5 @@ use the editor.
 - The backend generate-task must call generateCheckedTask and only supply callTool (one Lovable AI gateway call with the tool forced) plus the database reads and writes. Do not re-implement the prompts or the answer check.
 - Until the backend exists, /generuoti uses createMockGenerator (src/lib/generation/mockGenerator.ts); replace it with a call to generate-task.
 - Answers are AnswerItem objects {type, value, display} (src/lib/types.ts); tasks.answer stores that array.
+- Keep the public home outside the authenticated layout and redirect active sessions on the client; its static examples must not read the database.
+- Use the optional mode search parameter on /prisijungti for sign-in/sign-up state so registration links and browser navigation stay consistent.

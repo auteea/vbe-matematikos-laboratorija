@@ -124,13 +124,13 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const onLogin = useRouterState({ select: (s) => s.location.pathname.startsWith("/prisijungti") });
+  const publicPage = useRouterState({ select: (s) => s.location.pathname === "/" || s.location.pathname.startsWith("/prisijungti") });
 
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      {!onLogin && <TopBar />}
-      <main className="pb-12">
+      {!publicPage && <TopBar />}
+      <main className={publicPage ? "" : "pb-12"}>
         <Outlet />
       </main>
       <Toaster />

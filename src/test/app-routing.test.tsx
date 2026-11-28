@@ -14,4 +14,11 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+  it("keeps / public and the generating, sets, and examples pages protected", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes("/").map((match) => match.routeId)).not.toContain("/_authenticated");
+    for (const path of ["/generuoti", "/mano-rinkiniai", "/rinkinys/example", "/admin/pavyzdziai"]) {
+      expect(router.matchRoutes(path).map((match) => match.routeId)).toContain("/_authenticated");
+    }
+  });
 });
